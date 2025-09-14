@@ -1,0 +1,182 @@
+{
+  "model_type": "XGBoost",
+  "random_state": 123,
+  "sample_mode": false,
+  "sample_frac": 100,
+  "target": "SeriousDlqin2yrs",
+  "best_params": {
+    "classifier": "XGBoost",
+    "max_depth": 3,
+    "learning_rate": 0.10684817765160132,
+    "n_estimators": 93,
+    "min_child_weight": 18,
+    "subsample": 0.8991441260731768,
+    "colsample_bytree": 0.8553202256307102,
+    "colsample_bylevel": 0.8921562730624304,
+    "gamma": 0.1017506745720127,
+    "reg_lambda": 0.10083741530245507,
+    "reg_alpha": 0.9633469115187149,
+    "scale_pos_weight": 9.978155793948272
+  },
+  "used_features": [
+    "age",
+    "NumberOfDependents",
+    "MonthlyIncome",
+    "DebtRatio",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberRealEstateLoansOrLines",
+    "RevolvingUtilizationOfUnsecuredLines",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfTimes90DaysLate",
+    "imputed_income"
+  ],
+  "log_scale_features": [],
+  "dropped_columns": [
+    "Unnamed: 0",
+    "SeriousDlqin2yrs"
+  ],
+  "late_vars": [
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfTimes90DaysLate"
+  ],
+  "trimmed_values": {
+    "RevolvingUtilizationOfUnsecuredLines": [
+      0,
+      1.0929557681400022
+    ],
+    "DebtRatio": [
+      0,
+      2.4702802109800093
+    ],
+    "MonthlyIncome": [
+      0,
+      23000.0
+    ]
+  },
+  "descriptive_statistics": {
+    "age": {
+      "mean": 52.295206666666665,
+      "median": 52.0,
+      "std": 14.771865863100349,
+      "min": 0.0,
+      "max": 109.0,
+      "count": 150000,
+      "q25": 41.0,
+      "q75": 63.0
+    },
+    "NumberOfDependents": {
+      "mean": 0.7572222678605657,
+      "median": 0.0,
+      "std": 1.1150860714871407,
+      "min": 0.0,
+      "max": 20.0,
+      "count": 146076,
+      "q25": 0.0,
+      "q75": 1.0
+    },
+    "MonthlyIncome": {
+      "mean": 6209.006013333334,
+      "median": 5437.0,
+      "std": 3780.4495671401355,
+      "min": 1.0,
+      "max": 23000.0,
+      "count": 150000,
+      "q25": 4000.0,
+      "q75": 7400.0
+    },
+    "DebtRatio": {
+      "mean": 0.35493250523614145,
+      "median": 0.2791140855,
+      "std": 0.37344088989873864,
+      "min": 0.0,
+      "max": 2.4702802109800093,
+      "count": 150000,
+      "q25": 0.11625136325,
+      "q75": 0.466572945
+    },
+    "NumberOfOpenCreditLinesAndLoans": {
+      "mean": 8.45276,
+      "median": 8.0,
+      "std": 5.145950989643273,
+      "min": 0.0,
+      "max": 58.0,
+      "count": 150000,
+      "q25": 5.0,
+      "q75": 11.0
+    },
+    "NumberRealEstateLoansOrLines": {
+      "mean": 1.01824,
+      "median": 1.0,
+      "std": 1.1297709848828605,
+      "min": 0.0,
+      "max": 54.0,
+      "count": 150000,
+      "q25": 0.0,
+      "q75": 2.0
+    },
+    "RevolvingUtilizationOfUnsecuredLines": {
+      "mean": 0.32049570784472003,
+      "median": 0.154180737,
+      "std": 0.35215215263867855,
+      "min": 0.0,
+      "max": 1.0929557681400022,
+      "count": 150000,
+      "q25": 0.029867442,
+      "q75": 0.5590462475
+    },
+    "NumberOfTime30-59DaysPastDueNotWorse": {
+      "mean": 0.24535333333333334,
+      "median": 0.0,
+      "std": 0.6972314173691195,
+      "min": 0.0,
+      "max": 13.0,
+      "count": 150000,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "NumberOfTime60-89DaysPastDueNotWorse": {
+      "mean": 0.06470666666666666,
+      "median": 0.0,
+      "std": 0.32978847618609874,
+      "min": 0.0,
+      "max": 11.0,
+      "count": 150000,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "NumberOfTimes90DaysLate": {
+      "mean": 0.09029333333333334,
+      "median": 0.0,
+      "std": 0.4851068777222613,
+      "min": 0.0,
+      "max": 17.0,
+      "count": 150000,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "imputed_income": {
+      "mean": 0.2091,
+      "median": 0.0,
+      "std": 0.40666729954835334,
+      "min": 0.0,
+      "max": 1.0,
+      "count": 150000,
+      "q25": 0.0,
+      "q75": 0.0
+    }
+  },
+  "undersampling_ratio": 0.3,
+  "train_set_shape": [
+    34757,
+    11
+  ],
+  "test_set_shape": [
+    30000,
+    11
+  ],
+  "scoring_metric": "Weighted 70% recall and 30% precision",
+  "cv_folds": 3,
+  "last_updated": "2025-08-21T15:21:17.599674"
+}

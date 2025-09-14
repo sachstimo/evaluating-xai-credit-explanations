@@ -1,0 +1,83 @@
+{
+    "_comment": "Configuration file for XAI Credit Decisions project",
+    "RANDOM_SEED": 42,
+    "USE_CONCURRENT_PROCESSING": true,
+    "MAX_CONCURRENT_WORKERS": 16,
+
+
+    "PREDICTION_SAMPLE_SIZE": 10000,
+    "COUNTERFACTUALS_PER_INSTANCE": 3,
+    "IMMUTABLE_FEATURES": ["age", "imputed_income", "NumberOfDependents"],
+    "NUM_EXPLANATION_SAMPLES": 100,
+
+    "SHAP_BACKGROUND_SAMPLES": "full",
+
+    "REGENERATE_EXPLANATIONS": true,
+    "NUM_REGENERATIONS": 3,
+    "EXCLUDE_POSITIVE_PREDICTIONS":false,
+
+    "LLM_TEMPERATURE": 0.2,
+    "LLM_MAX_TOKENS": 8000,
+    "LLMS": {
+        "llama3.2-3b": {
+            "provider": "ollama",
+            "model": "llama3.2:3b",
+            "enabled": true
+        },
+        "mistral-7b": {
+            "provider": "ollama",
+            "model": "mistral:instruct",
+            "enabled": true
+        },
+        "gemma2-2b": {
+            "provider": "ollama",
+            "model": "gemma2:2b",
+            "enabled": true
+        },
+        "openai_gpt4o-mini": {
+            "provider": "openai",
+            "model": "gpt-4o-mini",
+            "enabled": false
+        },
+        "gpt-4o-mini": {
+            "provider": "openai",
+            "model": "gpt-4o-mini",
+            "temperature": 0.2,
+            "enabled": true
+        },
+        "gemini-2.5-flash": {
+            "provider": "google",
+            "model": "gemini-2.5-flash",
+            "temperature": 0.1,
+            "enabled": true
+        },
+        "gemini-2.5-pro": {
+            "provider": "google",
+            "model": "gemini-2.5-pro",
+            "temperature": 0.1,
+            "enabled": false
+        }
+    },
+    "default_judge": "gemini-2.5-flash",
+    "judge_fallback": "llama3.2-3b",
+
+    "REQUEST_DELAYS": {
+        "openai": 1.0,
+        "google": 10.0,
+        "ollama": 0.0
+    },
+    "REQUEST_TIMEOUT": 120,
+    "LOG_LEVEL": "INFO",
+    "DYNAMODB": {
+        "enabled": true,
+        "explanation_table": "llm_explanations",
+        "evaluation_table": "evaluation_results",
+        "region": "eu-central-1",
+        "overwrite": true
+    },
+    "GOOGLE_CLOUD": {
+    "project_id": "xai-credit-decisions",
+    "location": "us-central1",
+    "batch_bucket": "xai-credit-decisions-batch-us"
+  }
+}

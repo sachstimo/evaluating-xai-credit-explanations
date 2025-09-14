@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PYTHONCACHE
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env/
+
+# IDE and editors
+.vscode/
+.claude/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# MLflow
+mlruns/
+mlruns/*
+
+# Model outputs and logs
+*.log
+*.out
+*.err
+
+# Generated images and plots
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Backup files
+output/backups/
+*.bak
+*.backup
+*~
+
+# Environment files and sensitive config
+.env
+config/.env
+*.key
+*.pem
+*.crt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.coverage
+.nyc_output
+
+# Large data files (uncomment if needed)
+# *.csv
+# *.parquet
+# *.h5
+# *.hdf5

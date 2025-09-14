@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xai_pkg"
+version = "0.9"
+description = "Explainable AI for Credit Decision Making"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "shap>=0.42.1",
+    "optuna",
+    "langchain",
+    "langchain_ollama",
+    "langchain_community",
+    "langchain_openai",
+    "langgraph",
+    "openai",
+    "pip",
+    "jupyter",
+    "lightgbm",
+    "xgboost",
+    "imbalanced-learn",
+    "ddgs",
+    "dice-ml",
+    "tenacity",
+    "python-dotenv",
+    "transformers",
+    "torch",
+    "langchain-huggingface",
+    "accelerate",
+    "langchain-google-genai>=2.1.9",
+    "textstat",
+    "sentence-transformers",
+    "tqdm>=4.67.1",
+    "psutil>=7.0.0",
+    "ipykernel>=6.29.5",
+    "openpyxl",
+    "boto3",
+    "google-cloud-aiplatform>=1.110.0",
+    "google-cloud-storage>=2.19.0",
+    "langchain-google-vertexai>=2.0.28",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.poetry.dependencies]
+google-cloud-aiplatform = "^1.38.0"
+google-cloud-storage = "^2.10.0"
+
+[tool.setuptools.packages.find]
+where = ["src"]
